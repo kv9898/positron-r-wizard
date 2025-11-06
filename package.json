@@ -35,17 +35,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "positron-r-pipe-toggle.toggle",
-        "title": "R Pipe",
-        "when": "editorLangId == r && !config.positron.r.disablePipeUI",
-        "actionBarOptions": {
-          "controlType": "toggle",
-          "leftTitle": "%>% pipe",
-          "rightTitle": "|> pipe",
-          "toggled": "config.positron.r.useNativePipe"
-        }
-      },
-      {
         "command": "r.launchAddinPicker",
         "title": "Launch R Addin",
         "category": "R",
@@ -55,32 +44,9 @@
           "controlType": "button",
           "displayTitle": true
         }
-      },
-      {
-        "command": "positron-r-wizard.formatPipes",
-        "title": "Format Pipes",
-        "category": "R",
-        "when": "editorLangId == r",
-        "icon": "$(symbol-keyword)",
-        "actionBarOptions": {
-          "controlType": "button",
-          "displayTitle": true
-        }
       }
     ],
     "menus": {
-      "editor/actions/right": [
-        {
-          "command": "positron-r-pipe-toggle.toggle",
-          "when": "editorLangId == r && !config.positron.r.disablePipeUI",
-          "group": "wz@1"
-        },
-        {
-          "command": "positron-r-wizard.formatPipes",
-          "when": "editorLangId == r && !config.positron.r.disablePipeUI",
-          "group": "wz@3"
-        }
-      ],
       "editor/actions/left": [
         {
           "command": "r.launchAddinPicker",
@@ -92,25 +58,6 @@
     "configuration": {
       "title": "Positron R Wizard",
       "properties": {
-        "positron.r.pipe": {
-          "type": "string",
-          "default": "%>%",
-          "description": "The R pipe operator to use. This setting is managed by the 'R Pipe' toggle.",
-          "enum": [
-            "%>%",
-            "|>"
-          ]
-        },
-        "positron.r.useNativePipe": {
-          "type": "boolean",
-          "default": false,
-          "description": "Use native R pipe (|>) instead of magrittr pipe (%>%). This setting is synchronized with positron.r.pipe."
-        },
-        "positron.r.disablePipeUI": {
-          "type": "boolean",
-          "default": false,
-          "description": "Disable the R Pipe toggle button in the editor action bar."
-        },
         "positron-r-wizard.echoAddinCode": {
           "type": "boolean",
           "default": false,
