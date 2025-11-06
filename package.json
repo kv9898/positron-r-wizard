@@ -15,10 +15,10 @@
     "positron"
   ],
   "version": "0.0.4",
-  "publisher": "ntluong95",
+  "publisher": "kv9898",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ntluong95/positron-r-wizard.git"
+    "url": "https://github.com/kv9898/positron-r-wizard.git"
   },
   "icon": "resources/icon-clean.png",
   "license": "MIT",
